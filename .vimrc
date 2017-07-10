@@ -7,7 +7,6 @@ set shiftwidth=4
 set autoindent
 set smartindent
 set cindent
-set indentexpr
 set inc=1
 
 noremap :t :tabnew 
