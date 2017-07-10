@@ -1,5 +1,5 @@
 #!/bin/sh
-ln -s ~/git/dotfiles/.vimrc ~/.vimrc
-ln -s ~/git/dotfiles/.vimperatorrc ~/.vimperatorrc
-ln -s ~/git/dotfiles/.bashrc ~/.bashrc
-ln -s ~/git/dotfiles/.inputrc ~/.inputrc
+ln -sf ~/git/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/git/dotfiles/.vimperatorrc ~/.vimperatorrc
+ln -sf ~/git/dotfiles/.bashrc ~/.bashrc
+ln -sf ~/git/dotfiles/.inputrc ~/.inputrc
