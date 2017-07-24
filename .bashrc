@@ -42,12 +42,18 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+#if [ "$color_prompt" = yes ]; then
+#    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[\j]$ '
+#else
+#    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w[\j]$ '
+
+	if [ "$color_prompt" = yes ]; then
+	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\][\j]\$ '
+	else
+	PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w[\j]\$ '
 fi
-unset color_prompt force_color_prompt
+#unset color_prompt force_color_prompt
+	PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\][\j]\$ '
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
@@ -101,4 +107,7 @@ alias n=nautilus
 alias cdwin='cd /mnt/c/'
 
 # set prompt
-PS1='--------------------------------------------------------------------------------------------------$ '
+# PS1='--------------------------------------------------------------------------------------------------$ '
+
+# env-var for rogue
+export ROGUEOPTS="nojump,passgo,skull,askquit,name=a01,fruit=slime-mold,file=rogue.save"
