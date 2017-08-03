@@ -104,7 +104,7 @@ set -o vi
 # set alias for exit command
 alias e=exit
 alias n=nautilus
-alias cdwin='cd /mnt/c/'
+alias cdwin='cd /mnt/c/Users/cs16018/'
 
 # set prompt
 # PS1='--------------------------------------------------------------------------------------------------$ '
