@@ -10,8 +10,14 @@ set cindent
 set inc=1
 
 noremap :t :tabnew 
-noremap '<,'>s/ '<,'>s/\v
+
 noremap m <C-d>
 noremap , <C-u>
 noremap <S-h> gT
 noremap <S-l> gt
+
+cnoremap s/ s/\v
+nnoremap / /\v
+
+set magic
+map
