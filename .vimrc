@@ -20,4 +20,3 @@ cnoremap s/ s/\v
 nnoremap / /\v
 
 set magic
-map
