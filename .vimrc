@@ -20,4 +20,7 @@ cnoremap s/ s/\v
 nnoremap / /\v
 
 set magic
-map
+
+noremap <Enter> <Nop>
+noremap <Esc> <Nop>
+noremap <BS> <Nop>
