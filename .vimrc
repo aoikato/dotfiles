@@ -19,8 +19,6 @@ noremap <S-l> gt
 cnoremap s/ s/\v
 nnoremap / /\v
 
-set magic
-
 noremap <Enter> <Nop>
 noremap <Esc> <Nop>
 noremap <BS> <Nop>
