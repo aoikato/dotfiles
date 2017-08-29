@@ -24,11 +24,8 @@ nnoremap / /\v
 " caret-notation
 noremap <Enter> <Nop>
 lnoremap <Enter> <Nop>
-noremap <Esc> <Nop>
-lnoremap <Esc> <Nop>
-noremap <C-[> <Esc>
-lnoremap <C-[> <Esc>
 noremap <BS> <Nop>
 lnoremap <BS> <Nop>
+cnoremap :qf :q!
 
 :hi Comment ctermfg=yellow
