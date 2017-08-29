@@ -22,3 +22,5 @@ nnoremap / /\v
 noremap <Enter> <Nop>
 noremap <Esc> <Nop>
 noremap <BS> <Nop>
+
+:hi Comment ctermfg=yellow
