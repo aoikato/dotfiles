@@ -9,7 +9,7 @@ set smartindent
 set cindent
 set inc=1
 
-cnoremap :t :tabnew 
+cnoremap t tabnew 
 
 " navigation
 noremap m <C-d>
