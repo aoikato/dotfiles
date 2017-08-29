@@ -9,7 +9,7 @@ set smartindent
 set cindent
 set inc=1
 
-noremap :t :tabnew 
+cnoremap :t :tabnew 
 
 " navigation
 noremap m <C-d>
@@ -26,6 +26,7 @@ noremap <Enter> <Nop>
 lnoremap <Enter> <Nop>
 noremap <BS> <Nop>
 lnoremap <BS> <Nop>
-cnoremap :qf :q!
+
+cnoremap qf q!
 
 :hi Comment ctermfg=yellow
