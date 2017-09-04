@@ -111,3 +111,7 @@ alias cdwin='cd /mnt/c/Users/cs16018/'
 
 # env-var for rogue
 export ROGUEOPTS="nojump,passgo,skull,askquit,name=a01,fruit=slime-mold,file=rogue.save"
+
+# command history
+HISTFILESIZE=9999999999999999999999999
+HISTSIZE=9999999999999999999999999
