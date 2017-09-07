@@ -101,7 +101,7 @@ PATH=/home/cs16018/bin:$PATH
 # change to vi-mode while editting command-line
 set -o vi
 
-# set alias for exit command
+# set
 alias e=exit
 alias n=nautilus
 alias cdwin='cd /mnt/c/Users/cs16018/'
