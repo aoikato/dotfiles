@@ -9,15 +9,15 @@ set smartindent
 set cindent
 set inc=1
 
-cnoremap t tabnew 
+cnoremap ta tabnew 
 
 " navigation
 noremap m <C-d>
 noremap , <C-u>
-noremap <S-h> gT
-noremap <S-l> gt
+nnoremap <C-p> gT
+nnoremap <C-n> gt
 
-"regular expression
+" regular expression
 cnoremap s/ s/\v
 nnoremap / /\v
 
