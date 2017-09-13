@@ -28,6 +28,7 @@ noremap <BS> <Nop>
 lnoremap <BS> <Nop>
 
 inoremap <Tab> <Esc>
+inoremap <Esc> <Tab>
 
 cnoremap qf q!
 
