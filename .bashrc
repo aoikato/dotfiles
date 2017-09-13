@@ -115,3 +115,19 @@ export ROGUEOPTS="nojump,passgo,skull,askquit,name=a01,fruit=slime-mold,file=rog
 # command history
 HISTFILESIZE=9999999999999999999999999
 HISTSIZE=9999999999999999999999999
+
+# prompt
+function prompt() {
+	string="${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\][\j]"
+	length=$(echo $string | wc --bytes)
+	length=$((${COLUMNS}-${length}+35))
+	bar="-"
+	while [ "$length" -gt "0" ]
+	do
+	    bar="${bar}-"
+	    length=$((${length}-1))
+	done
+	
+	PS1="${string}${bar}$ "
+}
+prompt
