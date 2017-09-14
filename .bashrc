@@ -127,8 +127,10 @@ HISTSIZE=9999999999999999999999999
 #	bar=\"${bar}$ \"
 #	echo \"$bar\")"
 #}
+	
+#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\][\j]$(prompt)'
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\][\j]$(length=$(echo \u@\h:\w[\j] | wc --bytes)
+PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\[\e[36m\][\j]\[\e[00m\]\[\e[31m\]$(length=$(echo \u@\h:\w[\j] | wc --bytes)
 length=$((${COLUMNS}-${length}))
 bar="-"
 while [ "$length" -gt "0" ]
@@ -136,7 +138,5 @@ do
 bar="${bar}-"
 length=$((${length}-1))
 done
-echo "${bar}$ "
-)'
-	
-#PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\][\j]$(prompt)'
+echo "${bar}"
+)\[\e[00m\]$ '
