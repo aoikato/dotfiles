@@ -1,6 +1,6 @@
-mklink $HOME$/.vimrc $HOME$/dotfils/.vimrc
-mklink $HOME$/.vimperatorrc $HOME$/dotfils/.vimperatorrc
-mklink $HOME$/.bashrc $HOME$/dotfils/.bashrc
-mklink $HOME$/.inputrc $HOME$/dotfils/.inputrc
-mklink $HOME$/.latexmkrc $HOME$/dotfils/.latexmkrc
+mklink $HOME$/_vimrc $HOME$/dotfils/_vimrc
+mklink $HOME$/_vimperatorrc $HOME$/dotfils/_vimperatorrc
+mklink $HOME$/_bashrc $HOME$/dotfils/_bashrc
+mklink $HOME$/_inputrc $HOME$/dotfils/_inputrc
+mklink $HOME$/_latexmkrc $HOME$/dotfils/_latexmkrc
 exit 0
