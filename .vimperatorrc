@@ -9,7 +9,5 @@ map , <S-Space>
 noremap l 5l
 noremap h 5h
 inoremap <C-a> <C-t>
-noremap <C-n> gt
-noremap <C-p> gt
 
 set editor=vim
