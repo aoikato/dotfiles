@@ -27,9 +27,6 @@ lnoremap <Enter> <Nop>
 noremap <BS> <Nop>
 lnoremap <BS> <Nop>
 
-inoremap <Tab> <Esc>
-inoremap <Esc> <Tab>
-
 cnoremap qf q!
 
 :hi Comment ctermfg=yellow
