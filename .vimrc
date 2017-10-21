@@ -32,5 +32,5 @@ cnoremap qf q!
 :hi Comment ctermfg=yellow
 
 " template
-autocmd BufNewFile *.java Or ~/.vim/template/java.txt
-autocmd BufNewFile *.c Or ~/.vim/template/c.txt
+autocmd BufNewFile *.java 0r $HOME/.vim/template/java.txt
+autocmd BufNewFile *.c 0r $HOME/.vim/template/c.txt
