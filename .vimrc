@@ -30,3 +30,7 @@ lnoremap <BS> <Nop>
 cnoremap qf q!
 
 :hi Comment ctermfg=yellow
+
+" template
+autocmd BufNewFile *.java $HOME/.vim/template/java.txt
+autocmd BufNewFile *.c $HOME/.vim/template/c.txt
