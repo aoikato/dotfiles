@@ -12,8 +12,6 @@ set inc=1
 cnoremap ta tabnew 
 
 " navigation
-noremap m <C-d>
-noremap , <C-u>
 nnoremap <C-p> gT
 nnoremap <C-n> gt
 
@@ -35,4 +33,3 @@ cnoremap qf q!
 autocmd BufNewFile *.java 0r $HOME/.vim/template/java.txt
 autocmd BufNewFile *.c 0r $HOME/.vim/template/c.txt
 autocmd BufNewFile *.sh 0r $HOME/.vim/template/sh.txt
-
