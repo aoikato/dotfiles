@@ -34,3 +34,5 @@ cnoremap qf q!
 " template
 autocmd BufNewFile *.java 0r $HOME/.vim/template/java.txt
 autocmd BufNewFile *.c 0r $HOME/.vim/template/c.txt
+autocmd BufNewFile *.sh 0r $HOME/.vim/template/sh.txt
+
