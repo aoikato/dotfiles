@@ -27,6 +27,9 @@ lnoremap <BS> <Nop>
 
 cnoremap qf q!
 
+nnoremap <F5> :w<CR><C-Z>
+inoremap <F5> <Esc>:w<CR><C-Z>
+
 :hi Comment ctermfg=yellow
 
 " template
