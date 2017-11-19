@@ -140,3 +140,5 @@ length=$((${length}-1))
 done
 echo "${bar}"
 )\[\e[00m\]$ '
+
+export PATH=${PATH}:${HOME}/local/bin/dmd2/linux/bin64
