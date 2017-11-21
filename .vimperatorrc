@@ -4,8 +4,7 @@ hi Hint z-index:5000; font-family:open sans; font-size:12px; font-weight:ligher;
 
 map j 5<C-e>
 map k 5<C-y>
-map m <Space>
-map , <S-Space>
+map m <S-Space>
 noremap l 5l
 noremap h 5h
 inoremap <C-a> <C-t>
