@@ -33,9 +33,9 @@ inoremap <F5> <Esc>:up<CR><C-Z>
 nnoremap <Space> <C-D>
 nnoremap m <C-U>
 
-inoremap w W
-inoremap e E
-inoremap b B
+nnoremap w W
+nnoremap e E
+nnoremap b B
 
 :hi Comment ctermfg=yellow
 
