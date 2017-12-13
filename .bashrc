@@ -152,4 +152,14 @@ echo "${bar}"
 
 export PATH=${PATH}:${HOME}/local/bin/dmd2/linux/bin64
 
+
+_mymake(){
+	COMPREPLY=( `ls -F | grep -v / | sed 's/\..*//'` )
+}
+complete -F _mymake make
+
+_myhoge(){
+	COMPREPLY=( `ls -F | grep -v /` )
+}
+complete -F _myhoge hoge
 complete -f make
