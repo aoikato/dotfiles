@@ -33,10 +33,6 @@ inoremap <F5> <Esc>:up<CR><C-Z>
 nnoremap <Space> <C-D>
 nnoremap m <C-U>
 
-nnoremap w W
-nnoremap e E
-nnoremap b B
-
 :hi Comment ctermfg=yellow
 
 " template
