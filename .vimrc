@@ -29,6 +29,8 @@ cnoremap qf q!
 
 nnoremap <F5> :up<CR><C-Z>
 inoremap <F5> <Esc>:up<CR><C-Z>
+nnoremap <F6> :up<CR>
+inoremap <F6> <Esc>:up<CR>
 
 nnoremap <Space> <C-D>
 nnoremap m <C-U>
