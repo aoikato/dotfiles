@@ -7,6 +7,5 @@ map k 5<C-y>
 map m <S-Space>
 noremap l 5l
 noremap h 5h
-inoremap <C-a> <C-t>
 
 set editor=vim
