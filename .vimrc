@@ -1,5 +1,6 @@
 set clipboard=unnamedplus
 set relativenumber
+set number
 
 " indent
 set tabstop=4
