@@ -152,7 +152,6 @@ echo "${bar}"
 
 export PATH=${PATH}:${HOME}/local/bin/dmd2/linux/bin64
 
-
 _mymake(){
 	COMPREPLY=( `ls -F | grep -v / | sed 's/\..*//'` )
 }
@@ -167,3 +166,5 @@ complete -f make
 function mkcd(){
 	mkdir "$@" && eval cd "\"\$$#\"";
 }
+
+export PATH=${PATH}:${HOME}/myprograms/
