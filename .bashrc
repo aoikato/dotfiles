@@ -168,3 +168,4 @@ function mkcd(){
 }
 
 export PATH=${PATH}:${HOME}/myprograms/
+export PATH=${PATH}:${HOME}/gcloud/google-cloud-sdk/bin/
