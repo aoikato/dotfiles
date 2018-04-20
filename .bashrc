@@ -169,3 +169,6 @@ function mkcd(){
 
 export PATH=${PATH}:${HOME}/myprograms/
 export PATH=${PATH}:${HOME}/gcloud/google-cloud-sdk/bin/
+
+# For sep3asm and convertmif
+export PATH=${PATH}:/mnt/c/Users/cs16018/university_files/B3/first/Machine_Language_and_Computing/assembly
