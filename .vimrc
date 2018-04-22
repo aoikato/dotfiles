@@ -33,7 +33,27 @@ inoremap <F5> <Esc>:up<CR><C-Z>
 nnoremap <F6> :up<CR>
 inoremap <F6> <Esc>:up<CR>
 nnoremap j gj
+nnoremap 0j 0j
+nnoremap 1j 1j
+nnoremap 2j 2j
+nnoremap 3j 3j
+nnoremap 4j 4j
+nnoremap 5j 5j
+nnoremap 6j 6j
+nnoremap 7j 7j
+nnoremap 8j 8j
+nnoremap 9j 9j
 nnoremap k gk
+nnoremap 0k 0k
+nnoremap 1k 1k
+nnoremap 2k 2k
+nnoremap 3k 3k
+nnoremap 4k 4k
+nnoremap 5k 5k
+nnoremap 6k 6k
+nnoremap 7k 7k
+nnoremap 8k 8k
+nnoremap 9k 9k
 
 nnoremap <Space> <C-D>
 nnoremap m <C-U>
