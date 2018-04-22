@@ -58,6 +58,12 @@ nnoremap 9k 9k
 nnoremap <Space> <C-D>
 nnoremap m <C-U>
 
+"emacs-like navigation in command mode
+cnoremap <C-F> <Right>
+cnoremap <C-B> <Left>
+cnoremap <C-A> <Home>
+cnoremap <C-E> <End>
+
 :hi Comment ctermfg=yellow
 
 " template
