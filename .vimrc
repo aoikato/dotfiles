@@ -10,28 +10,27 @@ set smartindent
 set cindent
 set inc=1
 
+" mapping
+" ex-mode
 cnoremap ta tabnew 
-
-" navigation
+cnoremap qf q!
+" tab navigation
 nnoremap <C-p> gT
 nnoremap <C-n> gt
-
 " regular expression
 cnoremap s/ s/\v
 nnoremap / /\v
-
 " caret-notation
 noremap <Enter> <Nop>
 lnoremap <Enter> <Nop>
 noremap <BS> <Nop>
 lnoremap <BS> <Nop>
-
-cnoremap qf q!
-
+" save
 nnoremap <F5> :up<CR><C-Z>
 inoremap <F5> <Esc>:up<CR><C-Z>
 nnoremap <F6> :up<CR>
 inoremap <F6> <Esc>:up<CR>
+" navigation
 nnoremap j gj
 nnoremap 0j 0j
 nnoremap 1j 1j
@@ -54,15 +53,15 @@ nnoremap 6k 6k
 nnoremap 7k 7k
 nnoremap 8k 8k
 nnoremap 9k 9k
-
 nnoremap <Space> <C-D>
 nnoremap m <C-U>
-
 "emacs-like navigation in command mode
 cnoremap <C-F> <Right>
 cnoremap <C-B> <Left>
 cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
+" join lines
+nnoremap J gJ
 
 :hi Comment ctermfg=yellow
 
@@ -74,7 +73,8 @@ autocmd BufNewFile *.tex 0r $HOME/.vim/template/tex.txt
 autocmd BufNewFile *.d 0r $HOME/.vim/template/d.txt
 
 " colorscheme
-colorscheme khaki
+"colorscheme khaki
+colorscheme default
 
 set runtimepath+=~/.vim/bundle/neobundle.vim/
 call neobundle#begin(expand('~/.vim/bundle/'))
