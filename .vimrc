@@ -65,8 +65,8 @@ cnoremap <C-N> <Down>
 " join lines
 nnoremap J gJ
 " pane navigation
-nnoremap ss :split
-nnoremap sv :vsplit
+nnoremap ss :split 
+nnoremap sv :vsplit 
 nnoremap sh <C-W>h
 nnoremap sj <C-W>j
 nnoremap sk <C-W>k
