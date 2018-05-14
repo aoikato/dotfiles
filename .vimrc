@@ -55,13 +55,34 @@ nnoremap 8k 8k
 nnoremap 9k 9k
 nnoremap <Space> <C-D>
 nnoremap m <C-U>
-"emacs-like navigation in command mode
+" emacs-like navigation in command mode
 cnoremap <C-F> <Right>
 cnoremap <C-B> <Left>
 cnoremap <C-A> <Home>
 cnoremap <C-E> <End>
+cnoremap <C-P> <Up>
+cnoremap <C-N> <Down>
 " join lines
 nnoremap J gJ
+" pane navigation
+nnoremap ss :split
+nnoremap sv :vsplit
+nnoremap sh <C-W>h
+nnoremap sj <C-W>j
+nnoremap sk <C-W>k
+nnoremap sl <C-W>l
+nnoremap sw <C-W>w
+nnoremap sH <C-W>H
+nnoremap sJ <C-W>J
+nnoremap sK <C-W>K
+nnoremap sL <C-W>L
+nnoremap sr <C-W>r
+nnoremap s= <C-w>=
+nnoremap so <C-w>_<C-w>|
+nnoremap sO <C-w>=
+nnoremap sN :<C-u>bn<CR>
+nnoremap sP :<C-u>bp<CR>
+nnoremap sQ :<C-u>bd<CR>
 
 :hi Comment ctermfg=yellow
 
