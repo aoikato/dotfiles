@@ -64,7 +64,8 @@ cnoremap <C-P> <Up>
 cnoremap <C-N> <Down>
 " join lines
 nnoremap J gJ
-" pane navigation
+" window navigation
+"nnoremap s <NOP>
 nnoremap ss :split 
 nnoremap sv :vsplit 
 nnoremap sh <C-W>h
@@ -77,12 +78,16 @@ nnoremap sJ <C-W>J
 nnoremap sK <C-W>K
 nnoremap sL <C-W>L
 nnoremap sr <C-W>r
-nnoremap s= <C-w>=
+nnoremap s0 <C-w>=
+nnoremap <C-j> <C-w>+
+nnoremap <C-k> <C-w>-
+nnoremap <BS> <C-w><
+nnoremap <C-l> <C-w>>
 nnoremap so <C-w>_<C-w>|
-nnoremap sO <C-w>=
 nnoremap sN :<C-u>bn<CR>
 nnoremap sP :<C-u>bp<CR>
 nnoremap sQ :<C-u>bd<CR>
+
 
 :hi Comment ctermfg=yellow
 
