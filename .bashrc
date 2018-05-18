@@ -174,3 +174,5 @@ export PATH=${PATH}:${HOME}/gcloud/google-cloud-sdk/bin/
 function mif(){
 	/mnt/c/Users/cs16018/university_files/B3/first/Machine_Language_and_Computing/assembly/sep3asm $@.s && /mnt/c/Users/cs16018/university_files/B3/first/Machine_Language_and_Computing/assembly/convertmif $@.bin $@.mif
 }
+
+export CLASSPATH=/mnt/c/Users/cs16018/university_files/B3/first/Machine_Language_and_Computing/sep3sim2forStudent/sep3sim2forStudent/src:/mnt/c/Users/cs16018/university_files/B3/first/Machine_Language_and_Computing/sep3sim2forStudent/sep3sim2forStudent/bin;

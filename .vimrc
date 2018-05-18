@@ -23,8 +23,8 @@ nnoremap / /\v
 " caret-notation
 noremap <Enter> <Nop>
 lnoremap <Enter> <Nop>
-noremap <BS> <Nop>
-lnoremap <BS> <Nop>
+"noremap <BS> <Nop>
+"lnoremap <BS> <Nop>
 " save
 nnoremap <F5> :up<CR><C-Z>
 inoremap <F5> <Esc>:up<CR><C-Z>
