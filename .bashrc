@@ -108,6 +108,10 @@ alias cdwin='cd /mnt/c/Users/cs16018/'
 
 # env-var for rogue
 export ROGUEOPTS="jump,passgo,skull,askquit,name=a01,fruit=slime-mold,file=rogue.save"
+export CLASSPATH=/mnt/c/Users/cs16018/university_files/B3/first/Machine_Language_and_Computing/sep3sim2forStudent/sep3sim2forStudent/src:/mnt/c/Users/cs16018/university_files/B3/first/Machine_Language_and_Computing/sep3sim2forStudent/sep3sim2forStudent/bin:
+export PATH=${PATH}:${HOME}/local/bin/dmd2/linux/bin64
+export PATH=${PATH}:${HOME}/myprograms/
+export PATH=${PATH}:${HOME}/gcloud/google-cloud-sdk/bin/
 
 # command history
 HISTFILESIZE=9999999999999999999999999
@@ -150,7 +154,6 @@ done
 echo "${bar}"
 )\n\[\e[00m\]$ '
 
-export PATH=${PATH}:${HOME}/local/bin/dmd2/linux/bin64
 
 _mymake(){
 	COMPREPLY=( `ls -F | grep -v / | sed 's/\..*//'` )
@@ -167,12 +170,13 @@ function mkcd(){
 	mkdir "$@" && eval cd "\"\$$#\"";
 }
 
-export PATH=${PATH}:${HOME}/myprograms/
-export PATH=${PATH}:${HOME}/gcloud/google-cloud-sdk/bin/
 
 # Function to make a mif file
 function mif(){
 	/mnt/c/Users/cs16018/university_files/B3/first/Machine_Language_and_Computing/assembly/sep3asm $@.s && /mnt/c/Users/cs16018/university_files/B3/first/Machine_Language_and_Computing/assembly/convertmif $@.bin $@.mif
 }
 
-export CLASSPATH=/mnt/c/Users/cs16018/university_files/B3/first/Machine_Language_and_Computing/sep3sim2forStudent/sep3sim2forStudent/src:/mnt/c/Users/cs16018/university_files/B3/first/Machine_Language_and_Computing/sep3sim2forStudent/sep3sim2forStudent/bin;
+# Backup history
+history -r .bash_history 
+history  > ~/history.tmp/tmp
+rdiff-backup ~/history.tmp/ history.backup
