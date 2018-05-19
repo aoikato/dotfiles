@@ -179,4 +179,4 @@ function mif(){
 # Backup history
 history -r .bash_history 
 history  > ~/history.tmp/tmp
-rdiff-backup ~/history.tmp/ history.backup
+rdiff-backup ~/history.tmp/ ~/history.backup
