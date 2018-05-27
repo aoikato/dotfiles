@@ -105,6 +105,7 @@ set -o vi
 alias e=exit
 alias n=nautilus
 alias cdwin='cd /mnt/c/Users/cs16018/'
+alias jman='LANG=ja_JP.utf8 man'
 
 # env-var for rogue
 export ROGUEOPTS="jump,passgo,skull,askquit,name=a01,fruit=slime-mold,file=rogue.save"
@@ -134,7 +135,7 @@ HISTSIZE=9999999999999999999999999
 	
 #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\][\j]$(prompt)'
 
-PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\[\e[36m\][\j]\[\e[00m\]\[\e[31m\]$(length=$(echo \u@\h:\w[\j] | wc --bytes)
+PS1='\n${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\[\e[36m\][\j]\[\e[00m\]\[\e[31m\]$(length=$(echo \u@\h:\w[\j] | wc --bytes)
 
 while [ "${length}" -ge "${COLUMNS}" ]
 do
@@ -181,5 +182,5 @@ history -r .bash_history
 history  > ~/history.tmp/tmp
 rdiff-backup ~/history.tmp/ ~/history.backup
 
-# Terminal
+# Terminal emulator
 tmux
