@@ -181,6 +181,3 @@ function mif(){
 history -r .bash_history 
 history  > ~/history.tmp/tmp
 rdiff-backup ~/history.tmp/ ~/history.backup
-
-# Terminal emulator
-tmux
