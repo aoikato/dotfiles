@@ -18,7 +18,7 @@ cnoremap qf q!
 nnoremap <C-p> gT
 nnoremap <C-n> gt
 " regular expression
-cnoremap s/ s/\v
+"cnoremap s/ s/\v
 nnoremap / /\v
 " caret-notation
 noremap <Enter> <Nop>
@@ -89,6 +89,8 @@ nnoremap sP :<C-u>bp<CR>
 nnoremap sQ :<C-u>bd<CR>
 " VimShell
 cnoremap sh VimShell
+" vim-over
+cnoremap s/ OverCommandLine<CR>sa<BS>/\v
 
 
 :hi Comment ctermfg=yellow
@@ -113,6 +115,7 @@ NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/vimproc.vim'
 NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'osyo-manga/vim-over'
 call neobundle#end()
 filetype plugin indent on
 imap <C-k> <Plug>(neosnippet_expand_or_jump)
