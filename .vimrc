@@ -102,6 +102,7 @@ autocmd BufNewFile *.sh 0r $HOME/.vim/template/sh.txt
 autocmd BufNewFile *.tex 0r $HOME/.vim/template/tex.txt
 autocmd BufNewFile *.d 0r $HOME/.vim/template/d.txt
 autocmd BufNewFile *.lsp 0r $HOME/.vim/template/lisp.txt
+autocmd BufNewFile *.php 0r $HOME/.vim/template/php.txt
 
 " colorscheme
 "colorscheme khaki
