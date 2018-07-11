@@ -87,8 +87,6 @@ nnoremap so <C-w>_<C-w>|
 nnoremap sN :<C-u>bn<CR>
 nnoremap sP :<C-u>bp<CR>
 nnoremap sQ :<C-u>bd<CR>
-" VimShell
-cnoremap sh VimShell
 " vim-over
 cnoremap s/ OverCommandLine<CR>sa<BS>/\v
 
