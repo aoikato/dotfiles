@@ -103,8 +103,6 @@ set -o vi
 
 # set
 alias e=exit
-alias n=nautilus
-alias cdwin='cd /mnt/c/Users/cs16018/university_files/'
 alias jman='LANG=ja_JP.utf8 man'
 
 # env-var for rogue
