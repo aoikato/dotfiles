@@ -104,6 +104,7 @@ set -o vi
 # set
 alias e=exit
 alias jman='LANG=ja_JP.utf8 man'
+alias sudo='sudo -e'
 
 # env-var for rogue
 export ROGUEOPTS="jump,passgo,skull,askquit,name=a01,fruit=slime-mold,file=rogue.save"
