@@ -175,11 +175,6 @@ function mif(){
 	sep3asm $@.s && convertmif $@.bin $@.mif
 }
 
-# Backup history
-history -r .bash_history 
-history  > ~/history.tmp/tmp
-rdiff-backup ~/history.tmp/ ~/history.backup
-
 function ra {
     tempfile="$(mktemp)"
     /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
