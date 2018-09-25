@@ -96,7 +96,6 @@ fi
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
-PATH=/home/cs16018/bin:$PATH
 
 # change to vi-mode while editting command-line
 set -o vi
