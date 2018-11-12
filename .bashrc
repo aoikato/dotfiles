@@ -185,4 +185,15 @@ function ra {
     rm -f -- "$tempfile"
 }
 
+function mkver(){
+	EXTENSION=`echo $@ | sed -r 's/.*(\.[^.]*)/\1/g'`
+	BODYNAME=`echo $@ | sed -r 's/(.*)\.[^.]*/\1/g'`
+	if [ $EXTENSION = $BODYNAME ]
+	then
+		EXTENSION=''
+	fi
+	DATE=`date +%m%d%y`
+	mv $@ $BODYNAME.$DATE$EXTENSION
+}
+
 source ~/.bashrc.local
