@@ -193,7 +193,15 @@ function mkver(){
 		EXTENSION=''
 	fi
 	DATE=`date +%m%d%y`
-	mv $@ $BODYNAME.$DATE$EXTENSION
+	TIME=`date +%H%M`
+	FILENAME=$BODYNAME.$DATE$EXTENSION
+
+	if [ -e $FILENAME ]
+	then
+		FILENAME=$BODYNAME.$DATE$TIME$EXTENSION
+	fi
+
+	mv $@ $FILENAME
 }
 
 source ~/.bashrc.local
