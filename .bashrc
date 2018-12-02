@@ -194,11 +194,11 @@ function mkver(){
 	fi
 
 	ATIME=`stat $@ |
-		egrep 'Access: [0-9]'`
+			egrep 'Access: [0-9]'`
 	DATE=`echo $ATIME |
 			sed -r 's/[^0-9]*([0-9]+)-([0-9]+)-([0-9]+) ([0-9]+):([0-9]+).*/\2\3/g'`
 	TIME=`echo $ATIME |
-				sed -r 's/[^0-9]*([0-9]+)-([0-9]+)-([0-9]+) ([0-9]+):([0-9]+).*/\4\5/g'`
+			sed -r 's/[^0-9]*([0-9]+)-([0-9]+)-([0-9]+) ([0-9]+):([0-9]+).*/\4\5/g'`
 	FILENAME=$BODYNAME.$DATE$EXTENSION
 
 	if [ -e $FILENAME ]
