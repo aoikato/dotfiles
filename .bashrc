@@ -209,4 +209,10 @@ function mkver(){
 	mv $@ $FILENAME
 }
 
+# Function, enhanced make
+function hightmake(){
+	make $@ && ./$@
+}
+alias make=hightmake
+
 source ~/.bashrc.local
