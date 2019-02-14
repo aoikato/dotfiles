@@ -1,6 +1,7 @@
 set clipboard=unnamedplus
 set relativenumber
 set number
+set breakindent
 
 " indent
 set tabstop=4
@@ -88,7 +89,7 @@ nnoremap sN :<C-u>bn<CR>
 nnoremap sP :<C-u>bp<CR>
 nnoremap sQ :<C-u>bd<CR>
 " vim-over
-cnoremap s/ OverCommandLine<CR>sa<BS>/\v
+cnoremap s/ OverCommandLine<CR>sa<BS>/\v//g
 
 
 :hi Comment ctermfg=yellow
