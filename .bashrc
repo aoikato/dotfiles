@@ -151,7 +151,7 @@ do
 done
 
 echo "${bar}"
-)\n\[\e[00m\]$ '
+)\n\[\e[00m\]\$ '
 
 
 _mymake(){
@@ -176,14 +176,17 @@ function mif(){
 }
 
 function ra {
-    tempfile="$(mktemp)"
+    #tempfile="$(mktemp)"
+    tempfile='/home/a01/.radir.tmp'
     /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
     test -f "$tempfile" &&
     if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
         cd -- "$(cat "$tempfile")"
     fi
-    rm -f -- "$tempfile"
+    #rm -f -- "$tempfile"
 }
+
+alias cdra='cd `cat /home/a01/.radir.tmp`'
 
 function mkver(){
 	EXTENSION=`echo $@ | sed -r 's/.*(\.[^.]*)/\1/g'`
