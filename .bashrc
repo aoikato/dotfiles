@@ -104,7 +104,7 @@ set -o vi
 alias e=exit
 alias jman='LANG=ja_JP.utf8 man'
 alias sudo='sudo -E'
-alias ep='explorer.exe .'
+alias update='sudo updatedb && sudo apt update && sudo apt upgrade -y'
 
 # env-var for rogue
 export ROGUEOPTS="jump,passgo,skull,askquit,name=a01,fruit=slime-mold,file=rogue.save"
