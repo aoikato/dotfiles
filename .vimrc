@@ -89,7 +89,7 @@ nnoremap sN :<C-u>bn<CR>
 nnoremap sP :<C-u>bp<CR>
 nnoremap sQ :<C-u>bd<CR>
 " vim-over
-cnoremap s/ OverCommandLine<CR>sa<BS>/\v//g
+cnoremap s/ OverCommandLine<CR>sa<BS>/\v//g<C-b><C-b><C-b>
 
 
 :hi Comment ctermfg=yellow
