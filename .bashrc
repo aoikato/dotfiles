@@ -108,9 +108,6 @@ alias update='sudo updatedb && sudo apt update && sudo apt upgrade -y'
 
 # env-var for rogue
 export ROGUEOPTS="jump,passgo,skull,askquit,name=a01,fruit=slime-mold,file=rogue.save"
-export PATH=${PATH}:${HOME}/local/bin/dmd2/linux/bin64
-export PATH=${PATH}:${HOME}/myprograms/
-export PATH=${PATH}:${HOME}/gcloud/google-cloud-sdk/bin/
 
 # command history
 HISTFILESIZE=9999999999999999999999999
