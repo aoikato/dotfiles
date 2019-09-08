@@ -130,7 +130,7 @@ HISTSIZE=9999999999999999999999999
 	
 #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\][\j]$(prompt)'
 
-PS1='\n${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\[\e[36m\][\j]\[\e[00m\]\[\e[31m\]$(length=$(echo \u@\h:\w[\j] | wc --bytes)
+PS1='\n${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\[\e[36m\][\j]($(tmux ls | wc --lines))\[\e[00m\]\[\e[31m\]$(length=$(echo \u@\h:\w[\j] | wc --bytes)
 
 while [ "${length}" -ge "${COLUMNS}" ]
 do
@@ -215,12 +215,13 @@ function hightmake(){
 }
 alias make=hightmake
 
+source ~/.bashrc.local
+
 # tmux
 # sourced from: https://wiki.archlinux.org/index.php/tmux#Bash
 if [[ $DISPLAY ]]; then
 	# If not running interactively, do not do anything
 	[[ $- != *i* ]] && return
+	#[[ -z "$TMUX" ]] && exec tmux
 	[[ -z "$TMUX" ]] && { tmux; [ ! -f ~/.dontdie ] && exit || rm ~/.dontdie; }
 fi
-
-source ~/.bashrc.local
