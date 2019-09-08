@@ -215,4 +215,12 @@ function hightmake(){
 }
 alias make=hightmake
 
+# tmux
+# sourced from: https://wiki.archlinux.org/index.php/tmux#Bash
+if [[ $DISPLAY ]]; then
+	# If not running interactively, do not do anything
+	[[ $- != *i* ]] && return
+	[[ -z "$TMUX" ]] && { tmux; [ ! -f ~/.dontdie ] && exit || rm ~/.dontdie; }
+fi
+
 source ~/.bashrc.local
