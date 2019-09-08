@@ -184,7 +184,7 @@ function ra {
     #rm -f -- "$tempfile"
 }
 
-alias cdra='cd `cat /home/a01/.radir.tmp`'
+alias cdra='cd `cat ~/.radir.tmp`'
 
 function mkver(){
 	EXTENSION=`echo $@ | sed -r 's/.*(\.[^.]*)/\1/g'`
