@@ -130,8 +130,9 @@ HISTSIZE=9999999999999999999999999
 	
 #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\][\j]$(prompt)'
 
-PS1='\n${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\[\e[36m\][\j]($(tmux ls | wc --lines))\[\e[00m\]\[\e[31m\]$(length=$(echo \u@\h:\w[\j] | wc --bytes)
+PS1='\n${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\[\e[36m\][\j]$(tmux has 2>/dev/null && echo `{ echo -n "("; tmux ls | wc --lines; echo -ne "\b)"; }`)\[\e[00m\]\[\e[31m\]$(length=$(echo \u@\h:\w[\j] | wc --bytes)
 
+length=$((${length}+3))
 while [ "${length}" -ge "${COLUMNS}" ]
 do
 	length=$((${length}-${COLUMNS}))
