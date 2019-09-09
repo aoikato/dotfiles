@@ -175,7 +175,7 @@ function mif(){
 
 function ra {
     #tempfile="$(mktemp)"
-    tempfile='/home/a01/.radir.tmp'
+    tempfile='~/.radir.tmp'
     /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
     test -f "$tempfile" &&
     if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
