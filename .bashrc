@@ -175,7 +175,8 @@ function mif(){
 
 function ra {
     #tempfile="$(mktemp)"
-    tempfile='~/.radir.tmp'
+	[ ! -f "~/.radir" ] && touch ~/.radir
+    tempfile=~/.radir
     /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
     test -f "$tempfile" &&
     if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
@@ -184,7 +185,7 @@ function ra {
     #rm -f -- "$tempfile"
 }
 
-alias cdra='cd `cat ~/.radir.tmp`'
+alias cdra='cd `cat ~/.radir`'
 
 function mkver(){
 	EXTENSION=`echo $@ | sed -r 's/.*(\.[^.]*)/\1/g'`
