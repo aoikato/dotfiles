@@ -164,7 +164,7 @@ complete -F _myhoge hoge
 complete -f make
 
 function mkcd(){
-	mkdir "$@" && eval cd "\"\$$#\"";
+	mkdir -p "$@" && eval cd "\"\$$#\"";
 }
 
 
