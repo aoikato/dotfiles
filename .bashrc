@@ -165,7 +165,11 @@ complete -F _myhoge hoge
 complete -f make
 
 function mkcd(){
-	mkdir -p "$@" && eval command cd "\"\$$#\"";
+	if [ -z "$@" ]; then
+		command cd
+	else
+		mkdir -p "$@" && eval command cd "\"\$$#\"";
+	fi
 }
 
 
