@@ -105,6 +105,7 @@ alias e=exit
 alias jman='LANG=ja_JP.utf8 man'
 alias sudo='sudo -E'
 alias update='sudo updatedb && sudo apt update && sudo apt upgrade -y'
+alias cd='mkcd'
 
 # env-var for rogue
 export ROGUEOPTS="jump,passgo,skull,askquit,name=a01,fruit=slime-mold,file=rogue.save"
@@ -164,7 +165,7 @@ complete -F _myhoge hoge
 complete -f make
 
 function mkcd(){
-	mkdir -p "$@" && eval cd "\"\$$#\"";
+	mkdir -p "$@" && eval command cd "\"\$$#\"";
 }
 
 
