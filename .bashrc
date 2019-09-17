@@ -218,7 +218,10 @@ function mkver(){
 
 # Function, enhanced make
 function hightmake(){
-	make $@ && ./$@
+	make $@ && \
+	if [ -f $@.c ]; then
+		 ./$@
+	fi
 }
 alias make=hightmake
 
