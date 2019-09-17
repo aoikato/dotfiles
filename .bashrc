@@ -167,6 +167,8 @@ complete -f make
 function mkcd(){
 	if [ -z "$@" ]; then
 		command cd
+	elif [ "$@" = "-" ]; then
+		command cd -
 	else
 		mkdir -p "$@" && eval command cd "\"\$$#\"";
 	fi
