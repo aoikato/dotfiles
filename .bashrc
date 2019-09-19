@@ -166,12 +166,15 @@ complete -F _myhoge hoge
 complete -f make
 
 function mkcd(){
-	if [ -z "$@" ]; then
+	ARG=$@
+	if [ -z "$ARG" ]; then
 		command cd
-	elif [ "$@" = "-" ]; then
+	elif [ "$ARG" = "-" ]; then
 		command cd -
+	elif [ "${ARG:0:2}" = "--" ]; then
+		mkdir -p "${ARG:3}" && eval command cd "\"\$$#\"";
 	else
-		mkdir -p "$@" && eval command cd "\"\$$#\"";
+		mkdir -p "$ARG" && eval command cd "\"\$$#\"";
 	fi
 }
 
