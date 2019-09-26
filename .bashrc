@@ -166,10 +166,9 @@ complete -F _myhoge hoge
 complete -f make
 
 function mymkdirecho {
-	mkdir -p "$@" && eval command cd "\"\$$#\"";
-	if [ ! -d "$@" ]; then
-		echo directory "$@" has been created
-	fi
+	EXISTS=`[ -d "$@" ]; echo $?`
+	mkdir -p "$@" && eval command cd "\"\$$#\"" \
+		    && [ "$EXISTS" = "1" ] && echo directory "$@" has been created
 }
 function mkcd(){
 	ARG=$@
