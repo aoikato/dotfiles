@@ -179,11 +179,6 @@ function mkcd(){
 }
 
 
-# Function to make a mif file
-function mif(){
-	sep3asm $@.s && convertmif $@.bin $@.mif
-}
-
 function ra {
     #tempfile="$(mktemp)"
 	[ ! -f "~/.radir" ] && touch ~/.radir
