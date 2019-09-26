@@ -165,6 +165,12 @@ _myhoge(){
 complete -F _myhoge hoge
 complete -f make
 
+function mymkdirecho {
+	mkdir -p "$@" && eval command cd "\"\$$#\"";
+	if [ ! -d "$@" ]; then
+		echo directory "$@" has been created
+	fi
+}
 function mkcd(){
 	ARG=$@
 	if [ -z "$ARG" ]; then
@@ -172,9 +178,9 @@ function mkcd(){
 	elif [ "$ARG" = "-" ]; then
 		command cd -
 	elif [ "${ARG:0:2}" = "--" ]; then
-		mkdir -p "${ARG:3}" && eval command cd "\"\$$#\"";
+		mymkdirecho "${ARG:3}"
 	else
-		mkdir -p "$ARG" && eval command cd "\"\$$#\"";
+		mymkdirecho "$ARG"
 	fi
 }
 
