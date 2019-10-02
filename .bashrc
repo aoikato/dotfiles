@@ -106,7 +106,6 @@ alias jman='LANG=ja_JP.utf8 man'
 alias sudo='sudo -E'
 alias update='sudo updatedb && sudo apt update && sudo apt upgrade -y'
 alias cd='mkcd'
-alias tmux='command tmux; [ ! -f ~/.dontdie ] && exit || rm ~/.dontdie;'
 
 # env-var for rogue
 export ROGUEOPTS="jump,passgo,skull,askquit,name=a01,fruit=slime-mold,file=rogue.save"
@@ -132,7 +131,7 @@ HISTSIZE=9999999999999999999999999
 	
 #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\][\j]$(prompt)'
 
-PS1='\n${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\[\e[36m\][\j]$(command tmux has 2>/dev/null && echo `{ echo -n "("; command tmux ls | wc --lines; echo -ne "\b)"; }`)\[\e[00m\]\[\e[31m\]$(length=$(echo \u@\h:\w[\j] | wc --bytes)
+PS1='\n${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;35m\]\w\[\033[00m\]\[\e[36m\][\j]$(tmux has 2>/dev/null && echo `{ echo -n "("; tmux ls | wc --lines; echo -ne "\b)"; }`)\[\e[00m\]\[\e[31m\]$(length=$(echo \u@\h:\w[\j] | wc --bytes)
 
 length=$((${length}+3))
 while [ "${length}" -ge "${COLUMNS}" ]
@@ -239,5 +238,5 @@ if [[ $DISPLAY ]]; then
 	# If not running interactively, do not do anything
 	[[ $- != *i* ]] && return
 	#[[ -z "$TMUX" ]] && exec tmux
-	[[ -z "$TMUX" ]] && { command tmux; [ ! -f ~/.dontdie ] && exit || rm ~/.dontdie; }
+	[[ -z "$TMUX" ]] && { tmux; [ ! -f ~/.dontdie ] && exit || rm ~/.dontdie; }
 fi
