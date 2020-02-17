@@ -1,0 +1,21 @@
+keycode   9  = Tab
+keycode  23  = Escape
+
+clear lock
+clear control
+keycode  37  = Caps_Lock
+keycode  66  = Control_L
+add lock     = Caps_Lock
+add control  = Control_L
+add control  = Control_R
+
+keycode  100 = Tab
+
+!remove Lock = Caps_Lock
+!keysym Caps_Lock = Control_L
+!add Control = Control_L
+
+!keycode  32 = Shift_Lock
+!keycode  3e = Shift_Lock
+!keycode  40 = Alt_Lock
+!keycode  69 = Control_Lock
