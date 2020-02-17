@@ -184,3 +184,5 @@ bar {
 
 # user-added
 #default_border none
+
+bindsym $mod+semicolon exec i3lock -c000000
