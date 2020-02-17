@@ -18,4 +18,10 @@ ln -sf ~/git/dotfiles/ranger/rc.conf ~/.config/ranger/rc.conf
 ln -sf ~/git/dotfiles/ranger/rifle.conf ~/.config/ranger/rifle.conf
 ln -sf ~/git/dotfiles/ranger/scope.sh ~/.config/ranger/scope.sh
 
+ln -sf ~/git/dotfiles/.Xmodmap ~/.Xmodmap
+ln -sf ~/git/dotfiles/.Xresources ~/.Xresources
+ln -sf ~/git/dotfiles/.xbindkeysrc ~/.xbindkeysrc
+ln -sf ~/git/dotfiles/.xinitrc ~/.xinitrc
+ln -sf ~/git/dotfiles/.xprofile ~/.xprofile
+
 touch ~/.bashrc.local
