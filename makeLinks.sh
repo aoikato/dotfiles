@@ -11,9 +11,6 @@ inst(){
 		mkdir -p `dirname $2`
 	fi
 
-    #if [ -e $DST ];then
-    #    mv $DST $DST.old
-    #fi
 	ln --backup=numbered -s $SRC $DST
 }
 export -f inst
@@ -25,8 +22,3 @@ inst ~/git/dotfiles/misc/i3config ~/.config/i3/config
 inst ~/git/dotfiles/misc/i3statusconfig ~/.config/i3status/config
 
 touch ~/.bashrc.local
-
-#inst srcf
-#inst srcf dstd
-#isnt srcf dstd
-#isnt srcf dstf
