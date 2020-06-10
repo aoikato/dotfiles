@@ -1,27 +1,32 @@
-#!/bin/sh
-ln -sf ~/git/dotfiles/.vimrc ~/.vimrc
-ln -sf ~/git/dotfiles/.vimperatorrc ~/.vimperatorrc
-ln -sf ~/git/dotfiles/.bashrc ~/.bashrc
-ln -sf ~/git/dotfiles/.inputrc ~/.inputrc
-cp ~/git/dotfiles/.latexmkrc ~/.latexmkrc
-ln -sf ~/git/dotfiles/.tmux.conf ~/.tmux.conf
-mkdir -p ~/.w3m
-ln -sf ~/git/dotfiles/keymap ~/.w3m/keymap
-mkdir -p ~/.config/i3
-ln -sf ~/git/dotfiles/i3config ~/.config/i3/config
-mkdir -p ~/.config/i3status
-ln -sf ~/git/dotfiles/i3status_config ~/.config/i3status/config
-mkdir -p ~/.config/ranger
-ln -sf ~/git/dotfiles/ranger/commands.py ~/.config/ranger/commands.py
-ln -sf ~/git/dotfiles/ranger/commands_full.py ~/.config/ranger/commands_full.py
-ln -sf ~/git/dotfiles/ranger/rc.conf ~/.config/ranger/rc.conf
-ln -sf ~/git/dotfiles/ranger/rifle.conf ~/.config/ranger/rifle.conf
-ln -sf ~/git/dotfiles/ranger/scope.sh ~/.config/ranger/scope.sh
+#!/bin/bash
+inst(){
+    SRC=`realpath $1`
+    if [ -z "$2" ];then
+		DST="$HOME/"`basename $1`
+	elif [ -n "`echo $2 | grep -E '.*/$'`" ]; then
+		DST=$2`basename $1`
+		mkdir -p $2
+	else
+		DST=$2
+		mkdir -p `dirname $2`
+	fi
 
-ln -sf ~/git/dotfiles/.Xmodmap ~/.Xmodmap
-ln -sf ~/git/dotfiles/.Xresources ~/.Xresources
-ln -sf ~/git/dotfiles/.xbindkeysrc ~/.xbindkeysrc
-ln -sf ~/git/dotfiles/.xinitrc ~/.xinitrc
-ln -sf ~/git/dotfiles/.xprofile ~/.xprofile
+    #if [ -e $DST ];then
+    #    mv $DST $DST.old
+    #fi
+	ln --backup=numbered -s $SRC $DST
+}
+export -f inst
+
+find . -maxdepth 1 -type f | grep -vE 'makeLinks.*|README.md' | xargs -n1 -d'\n' bash -c 'inst "$@"' _
+find ./ranger -maxdepth 1 -type f | xargs -n1 -d'\n' bash -c 'inst "$@" ~/.config/ranger/' _
+inst ~/git/dotfiles/misc/keymap ~/.w3m/
+inst ~/git/dotfiles/misc/i3config ~/.config/i3/config
+inst ~/git/dotfiles/misc/i3statusconfig ~/.config/i3status/config
 
 touch ~/.bashrc.local
+
+#inst srcf
+#inst srcf dstd
+#isnt srcf dstd
+#isnt srcf dstf
