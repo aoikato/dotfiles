@@ -24,6 +24,11 @@ add control  = Control_R
 
 keycode  100 = Tab
 
+keycode  111 = NoSymbol
+keycode  113 = NoSymbol
+keycode  114 = NoSymbol
+keycode  116 = NoSymbol
+
 !remove Lock = Caps_Lock
 !keysym Caps_Lock = Control_L
 !add Control = Control_L
