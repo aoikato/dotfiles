@@ -13,8 +13,13 @@ set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
+#font <X core font description>
+#font pango:<family list> [<style options>] <size>
 #font pango:monospace 8
-font MigMix
+#font pango:TakaoGothic Medium 13
+#font pango:Inconsolata Medium 10
+#font pango:Migmix Medium 13
+font pango:Noto Sans Mono CJK JP Small 11
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -180,6 +185,7 @@ bindsym $mod+r mode "resize"
 bar {
 #status_command i3status -c ~/git/ilpianista/dotfiles/config/i3status/config
         status_command i3status
+		font pango:Noto Sans Mono CJK JP Small 14
 }
 
 # user-added
