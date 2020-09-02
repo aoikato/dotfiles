@@ -1,0 +1,49 @@
+keycode 133  = Mode_switch
+
+keycode  43  = h H Left 
+keycode  44  = j J Down 
+keycode  45  = k K Up 
+keycode  46  = l L Right 
+
+keycode  58 = m M Next
+keycode  59 = comma less Prior
+
+keycode  30 = u U End
+keycode  31 = i I Home
+
+keycode   9  = Tab
+keycode  23  = Escape
+
+clear lock
+clear control
+keycode  37  = Caps_Lock
+keycode  66  = Control_L
+add lock     = Caps_Lock
+add control  = Control_L
+add control  = Control_R
+
+keycode  100 = Tab
+
+keycode  111 = NoSymbol
+keycode  113 = NoSymbol
+keycode  114 = NoSymbol
+keycode  116 = NoSymbol
+
+keycode  79 = KP_7
+keycode  80 = KP_8
+keycode  81 = KP_9
+keycode  83 = KP_4
+keycode  84 = KP_5
+keycode  85 = KP_6
+keycode  87 = KP_1
+keycode  88 = KP_2
+keycode  89 = KP_3
+
+!remove Lock = Caps_Lock
+!keysym Caps_Lock = Control_L
+!add Control = Control_L
+
+!keycode  32 = Shift_Lock
+!keycode  3e = Shift_Lock
+!keycode  40 = Alt_Lock
+!keycode  69 = Control_Lock

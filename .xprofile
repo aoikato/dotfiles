@@ -1,0 +1,4 @@
+xkbset sticky -twokey latchlock
+xkbset exp 1 =sticky =twokey =latchlock
+xmodmap ~/.Xmodmap
+

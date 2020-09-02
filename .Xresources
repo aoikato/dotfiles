@@ -1,0 +1,6 @@
+xterm*termName:				xterm-256color
+XTerm*locale:				UTF-8
+xterm*faceName: 			MigMix 1M
+xterm*faceNameDoublesize:	MigMix 2M
+xterm*faceSize: 			10
+xterm*allowBoldFonts:		false
