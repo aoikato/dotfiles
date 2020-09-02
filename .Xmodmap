@@ -11,11 +11,6 @@ add control  = Control_R
 
 keycode  100 = Tab
 
-keycode  111 = NoSymbol
-keycode  113 = NoSymbol
-keycode  114 = NoSymbol
-keycode  116 = NoSymbol
-
 keycode  79 = KP_7
 keycode  80 = KP_8
 keycode  81 = KP_9
