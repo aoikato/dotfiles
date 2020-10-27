@@ -123,6 +123,17 @@ handle_image() {
                       -jpeg -tiffcompression jpeg \
                       -- "${FILE_PATH}" "${IMAGE_CACHE_PATH%.*}" \
                  && exit 6 || exit 1;;
+		# PPTX
+		 application/vnd.openxmlformats-officedocument.presentationml.presentation)
+			STEM=`basename "${FILE_PATH}" | sed -r 's/([^.]+).*/\1/'` \
+			&& libreoffice --headless --convert-to pdf --outdir /tmp "${FILE_PATH}" \
+			&& pdftoppm -f 1 -l 1 \
+					 -scale-to-x 1920 \
+					 -scale-to-y -1 \
+					 -singlefile \
+					 -jpeg -tiffcompression jpeg \
+					 -- "/tmp/${STEM}.pdf"  "${IMAGE_CACHE_PATH%.*}" \
+				&& exit 6 || exit 1;;
 
         # Preview archives using the first image inside.
         # (Very useful for comic book collections for example.)
