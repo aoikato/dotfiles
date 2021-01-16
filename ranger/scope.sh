@@ -123,9 +123,9 @@ handle_image() {
                       -jpeg -tiffcompression jpeg \
                       -- "${FILE_PATH}" "${IMAGE_CACHE_PATH%.*}" \
                  && exit 6 || exit 1;;
-		# PPTX
-		 application/vnd.openxmlformats-officedocument.presentationml.presentation)
-			STEM=`basename "${FILE_PATH}" | sed -r 's/([^.]+).*/\1/'` \
+		# PPTX, DOCX and XLSX
+		 application/vnd.openxmlformats-officedocument.*)
+			STEM=`basename "${FILE_PATH}" | sed -r 's/(.+)\.[^.]+/\1/'` \
 			&& libreoffice --headless --convert-to pdf --outdir /tmp "${FILE_PATH}" \
 			&& pdftoppm -f 1 -l 1 \
 					 -scale-to-x 1920 \
