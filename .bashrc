@@ -242,3 +242,29 @@ if [[ $DISPLAY ]]; then
 	#[[ -z "$TMUX" ]] && exec tmux
 	[[ -z "$TMUX" ]] && { tmux; [ ! -f ~/.dontdie ] && exit || rm ~/.dontdie; }
 fi
+
+function notify(){
+	function enable_hisotry(){
+		## Enable history
+		HISTFILE=~/.bash_history
+		set -o history
+	}
+	function post_message(){
+		## Notify first argument
+		curl\
+			-X POST\
+			-H 'Content-type: application/json'\
+			--data "{'text':\"$*\"}"\
+			$SLACKGENERAL
+	}
+	case "$1" in
+		-s | --start)
+			enable_hisotry
+			;;
+		-1 | --oneline)
+			post_message `history 1 | sed -r 's/^ +[0-9]+ +(.+); notify -1/\1/g'`
+			;;
+		*)
+			post_message `history 2 | head -n1 | sed -r 's/^ +[0-9]+ +//g'`
+	esac
+}
