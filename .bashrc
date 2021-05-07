@@ -107,6 +107,7 @@ alias sudo='sudo -E'
 alias update='sudo updatedb && sudo apt update && sudo apt upgrade -y'
 alias cd='mkcd'
 alias vlsblk='lsblk --output VENDOR,MODEL,LABEL,NAME,FSTYPE,SIZE,MOUNTPOINT'
+alias xcopy='xclip -in -selection clipboard'
 
 # env-var for rogue
 export ROGUEOPTS="jump,passgo,skull,askquit,name=a01,fruit=slime-mold,file=rogue.save"
