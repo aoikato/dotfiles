@@ -111,6 +111,9 @@ alias xcopy='xclip -in -selection clipboard'
 alias watch='watch -td -n0.1'
 alias dmesg='dmesg -wT'
 
+# Variables
+EDITOR=/usr/bin/vim.gtk3
+
 # env-var for rogue
 export ROGUEOPTS="jump,passgo,skull,askquit,name=a01,fruit=slime-mold,file=rogue.save"
 
