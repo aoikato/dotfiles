@@ -123,6 +123,17 @@ handle_image() {
                       -jpeg -tiffcompression jpeg \
                       -- "${FILE_PATH}" "${IMAGE_CACHE_PATH%.*}" \
                  && exit 6 || exit 1;;
+        # PS
+         application/postscript)
+			 gs \
+				 -sDEVICE=jpeg \
+				 -r300 \
+				 -sPAPERSIZE=a4 \
+				 -dBATCH \
+				 -dNOPAUSE \
+				 -sOutputFile="${IMAGE_CACHE_PATH}" \
+				 "${FILE_PATH}" >>'/home/a01/misc.log' \
+			 && exit 6 || exit 1;;
 		# PPTX, DOCX and XLSX
 		 application/vnd.openxmlformats-officedocument.*)
 			stem=`basename "${FILE_PATH%.*}"` \
