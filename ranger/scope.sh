@@ -133,6 +133,7 @@ handle_image() {
 					 -singlefile \
 					 -jpeg -tiffcompression jpeg \
 					 -- "/tmp/${STEM}.pdf"  "${IMAGE_CACHE_PATH%.*}" \
+				&& rm "/tmp/${STEM}.pdf" \
 				&& exit 6 || exit 1;;
 
         # Preview archives using the first image inside.
