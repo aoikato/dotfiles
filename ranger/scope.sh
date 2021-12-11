@@ -125,15 +125,15 @@ handle_image() {
                  && exit 6 || exit 1;;
 		# PPTX, DOCX and XLSX
 		 application/vnd.openxmlformats-officedocument.*)
-			STEM=`basename "${FILE_PATH}" | sed -r 's/(.+)\.[^.]+/\1/'` \
+			stem=`basename "${FILE_PATH%.*}"` \
 			&& libreoffice --headless --convert-to pdf --outdir /tmp "${FILE_PATH}" \
 			&& pdftoppm -f 1 -l 1 \
 					 -scale-to-x 1920 \
 					 -scale-to-y -1 \
 					 -singlefile \
 					 -jpeg -tiffcompression jpeg \
-					 -- "/tmp/${STEM}.pdf"  "${IMAGE_CACHE_PATH%.*}" \
-				&& rm "/tmp/${STEM}.pdf" \
+					 -- "/tmp/${stem}.pdf"  "${IMAGE_CACHE_PATH%.*}" \
+				&& rm "/tmp/${stem}.pdf" \
 				&& exit 6 || exit 1;;
 
         # Preview archives using the first image inside.
