@@ -137,14 +137,8 @@ handle_image() {
 		# PPTX, DOCX and XLSX
 		 application/vnd.openxmlformats-officedocument.*)
 			stem=`basename "${FILE_PATH%.*}"` \
-			&& libreoffice --headless --convert-to pdf --outdir /tmp "${FILE_PATH}" \
-			&& pdftoppm -f 1 -l 1 \
-					 -scale-to-x 1920 \
-					 -scale-to-y -1 \
-					 -singlefile \
-					 -jpeg -tiffcompression jpeg \
-					 -- "/tmp/${stem}.pdf"  "${IMAGE_CACHE_PATH%.*}" \
-				&& rm "/tmp/${stem}.pdf" \
+			&& libreoffice --headless --convert-to jpg --outdir /tmp "${FILE_PATH}" \
+			&& mv /tmp/"${stem}".jpg "${IMAGE_CACHE_PATH}" >>'/home/a01/misc.log' \
 				&& exit 6 || exit 1;;
 
         # Preview archives using the first image inside.
