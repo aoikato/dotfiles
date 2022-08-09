@@ -228,6 +228,5 @@ function ps1 {
 	echo -n \\$2
 	tput sgr0
 }
-PS1='\n'
-PS1=$PS1'${debian_chroot:+($debian_chroot)}'
-PS1=$PS1'['`ps1 2 A`']'`ps1 6 u`@`ps1 8 h`:`ps1 5 w`'\n\$ '
+PS1=$(printf '\n%s[%s]%s@%s:%s\n\$ ' \
+	'${debian_chroot:+($debian_chroot)}' `ps1 2 A` `ps1 6 u` `ps1 8 h` `ps1 5 w`)
