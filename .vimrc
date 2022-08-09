@@ -88,6 +88,7 @@ nnoremap so <C-w>_<C-w>|
 nnoremap sN :<C-u>bn<CR>
 nnoremap sP :<C-u>bp<CR>
 nnoremap sQ :<C-u>bd<CR>
+nnoremap Y y$
 " vim-over
 cnoremap s/ OverCommandLine<CR>sa<BS>/\v//g<C-b><C-b><C-b>
 
